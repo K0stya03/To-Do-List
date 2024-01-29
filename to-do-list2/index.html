@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Список справ</title>
+</head>
+<body>
+  <div id="app">
+    <div id="currentTime"></div>
+    <h1 class="center-text">To Do List</h1>
+    <button id="addListBtn" onclick="showInputPopup()">Add a new list</button>
+      <div id="inputPopup" style="display: none;">
+        <input type="text" id="listNameInput" placeholder="Enter a name for the new list" class="styled-input">
+        <button onclick="createNewListFromInput()" class="styled-button">Add</button>
+        <button onclick="cancelInput()" class="styled-button cancel-button">Cancel</button>
+      </div>
+    <label for="listSelect">Select or create a list:</label>
+    <select id="listSelect" onchange="changeList()"></select>
+    <button id="deleteListBtn" onclick="deleteList()" class="styled-button cancel-button">Delete the current list</button>
+    <div class="input-container">
+        <input type="text" id="newTask" placeholder="Add a new case" class="styled-input">
+        <button id="addTaskBtn" onclick="addTask()">+</button>
+      </div>
+    <ul id="taskList"></ul>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
